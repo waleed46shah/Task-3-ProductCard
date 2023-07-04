@@ -1,0 +1,102 @@
+.card-container{
+  display: flex;
+  width: 40vh;
+  min-width: 40vw;
+  height: auto;
+  background: var(--White);
+  align-self: center;
+  justify-self: center;
+  border-radius: 10px;
+  margin: 1rem;
+  box-shadow: rgba($color: #000000, $alpha: 0.15) 1px 1px 20px 2px;
+  .image{
+    width: 50%;
+    background: url(./assets/img-desktop.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px 0px 0px 10px;
+  }
+  .content{
+    
+    width: 50%;
+    padding: 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    .content-subheading{
+      color: var(--Darkgrayishblue);
+      text-transform:uppercase;
+      letter-spacing: 3px;
+      font-size: 0.93rem;
+    }
+    h1{
+      width: 80%;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--Verydarkblue);
+    }
+    .content-para{
+      font-size: 0.93rem;
+      line-height: 1.5;
+      color: var(--Darkgrayishblue);
+    }
+    .pricing{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      h2{
+        font-size: 2rem;
+        color: var(--Lightcyan);
+      }
+      .discount{
+        text-decoration: line-through;
+        color: var(--Darkgrayishblue);
+      }
+    }
+    .btn{
+      display: flex;
+      
+      width: 100%;
+      gap: 0.5rem;
+      font-weight: 700;
+      color: var(--White);
+      justify-content: center;
+      align-items: center;
+      background-color: var(--Lightcyan);
+      padding: 1rem 1rem;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      &:hover{
+        background-color: var(--Darkcyan);
+      }
+    }
+  }
+  @media screen and (max-width:1080px) {
+    width: 90vw;
+  }
+  @media screen and (max-width:720px) {
+    flex-direction: column;
+    width: 80vw;
+    height: 80vh;
+    .image{
+      height: 40%;
+      width: 100%;
+      border-radius: 10px 10px 0 0;
+    }
+    .content{
+      height: 60%;
+      width: 100%;
+      padding: 1rem 1rem;
+      h1{
+        width: 100%;
+        font-size: 1.8rem;
+      }
+    }
+
+  }
+}
